@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INDAG</title>
+    <link rel="stylesheet" type="text/css" href="coba.css">
+</head>
+<body>
+    <center><h1>Rancang Bangun Aplikasi Berbasis WEB di Dinas Koperasi Perindustrian dan Perdagangan</h1></center>
+    <center><h2>Data Barang</h2></center>
+    
+    <!-- Form untuk menambahkan data -->
+    <h2>Tambah Data</h2>
+    <form id="addForm">
+        <input type="text" id="idPemda" placeholder="ID Pemda">
+        <input type="text" id="namaBarang" placeholder="Nama Barang">
+        <input type="text" id="harga" placeholder="Harga">
+        <input type="text" id="tahun" placeholder="Tahun">
+        <button type="button" onclick="addData()">Tambah</button>
+    </form>
+
+    <!-- Form untuk mencari data -->
+    <h2>Cari Data</h2>
+    <input type="text" id="search" placeholder="Cari Nama Barang">
+    <button type="button" onclick="searchData()">Cari</button>
+
+    <!-- Tabel untuk menampilkan data -->
+    <h2>Daftar Barang</h2>
+    <table border="1">
+        <tr>
+            <th>ID Pemda</th>
+            <th>Nama Barang</th>
+            <th>Harga</th>
+            <th>Tahun</th>
+            <th>Aksi</th>
+        </tr>
+        <tbody id="data">
+            <!-- Data akan ditampilkan di sini -->
+        </tbody>
+    </table>
+
+    <!-- Include file JavaScript -->
+    <script src="utils.js"></script>
+    <script src="coba.js"></script>
+    <script>
+        displayData(); // Tampilkan data awal
+    </script>
+</body>
+</html>
